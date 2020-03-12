@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmins="http.//www.w3.org/1999/xhtml">
+    <head>
+         
+        <style>
+		body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: Lightblue;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+        </style>
+   
+   
+   
+<div class="header">
+  <h1>AC Consulting ltd </h1>
+  <p> Shop Calculator: </p>
+    <p>Select a consulting service</p>
+
+      
+    </head>
+        <body>
+        <div class="form">
+                      <form name="intCalc" method="post" action="eBus2.php">
+			
+       
+		
+  
+        <hr/>
+			
+                </center>
+        <hr/>
+        <center>
+            <table cellspacing="20">
+                <tr>
+                    <td><b>Package</b></td>
+                </tr>
+                <tr>
+                    <td>Hyperautomation @ $200</td>
+                    <td><input type="radio" id="Hyperautomation" name="rdoGroup" value="200"  required /></td>
+                </tr>
+                <tr>
+                    <td>Multiexperience @ $500</td>
+                    <td><input type="radio" id="Multiexperience" name="rdoGroup" value="500"  /></td>
+                </tr>
+                <tr>
+                    <td>Distributed Cloud @ $1000</td>
+                    <td><input type="radio" id="DistributedCloud" name="rdoGroup" value="1000" /></td>
+                </tr>
+            </table>
+        </center>
+        <br/>
+            <center>
+                 <table cellspacing="10">
+            <tr>
+                    <td><b></b></td>
+                    <td><b>Amount</b></td>
+            </tr>
+                <tr>
+                    <td>Sub Total</td>
+                    <td><input type="text" id="txtSubTot" name="txtSub" readonly  required/></td>
+                </tr>
+                <tr>
+                    <td>Discount @ 5%</td>
+                    <td><input type="text" id="txtDisc" name="txtDisc" readonly  required/></td>
+                </tr>
+                <tr>
+                    <td>+ VAT @ 20%</td>
+                    <td><input type="text" id="txtVAT" name="txtVAT" readonly required /></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input type="text" id="txtTotal" name="txtTotal" value="" readonly required/></td>
+                </tr>
+            </table>
+        </center>
+       
+        <br />
+            <center>
+			  <input type="button" name="btnBack" id="btnBack" onclick="window.location.href='consultant.html'" value="Back"/>
+            <input type="button" name="btnCalc" id="btnCalc" onclick="calcSub()" value="Calculate Amount"/>
+            <input type="reset" name="btnClear" id="btnClear" value="Clear"/>
+			  <input type="button" name="btnProceed" id="btnproceed" onclick="window.location.href='ebus2.html'" value="Proceed"/>
+           
+        </center>
+            </form>
+        </div>
+        </center>
+            <script type="text/javascript">
+              function calcSub(){
+                    var argSelection = parseFloat(document.getElementById('txtSubTot').value);
+                    var Hyperautomation = parseFloat(document.getElementById('Hyperautomation').value);
+                    var Multiexperience = parseFloat(document.getElementById('Multiexperience').value);
+                    var DistributedCloud = parseFloat(document.getElementById('DistributedCloud').value);
+                   
+                   
+                    if (document.getElementById('Hyperautomation').checked) {
+                        document.intCalc.txtSubTot.value = Hyperautomation;
+                        argSelection = Hyperautomation;
+                        calcVatTotal(argSelection);
+                       
+                    }
+                   else if (document.getElementById('Multiexperience').checked) {
+                        document.intCalc.txtSubTot.value = Multiexperience;
+                        argSelection = Multiexperience;
+                        calcVatTotal(argSelection);
+                       
+                    }
+                    else if (document.getElementById('DistributedCloud').checked) {
+                        document.intCalc.txtSubTot.value = DistributedCloud;
+                        argSelection = DistributedCloud;
+                        calcVatTotal(argSelection);
+                    }
+                }
+               
+               
+                function calcVatTotal(parmSelection) {
+                    var argsubTotal = parseFloat(parmSelection);
+                    var argdiscountAmt = parseFloat(argsubTotal * .05);
+                    var argvatAmt = parseFloat(argsubTotal * .20);    
+                    var argtotalPrice = parseFloat(argsubTotal - argdiscountAmt + argvatAmt);
+                   calcDisp(argsubTotal, argdiscountAmt,argvatAmt,argtotalPrice);
+                   
+                 
+                }
+
+               function calcDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice){
+               document.intCalc.txtSubTot.value = parmsubTotal;
+               document.intCalc.txtDisc.value = parmdiscountAmt;
+                    document.intCalc.txtVAT.value = parmvatAmt;
+                    document.intCalc.txtTotal.value = parmtotalPrice;
+}
+               
+               
+            </script>
+
+    </body>
+    </html>
+

@@ -1,0 +1,187 @@
+
+<!DOCTYPE>
+
+<head>
+ <title>Interests</title>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background:#B0E0E6;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+</style>
+
+ <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+#container {
+  overflow: hidden;
+  width: 800px;
+  height: 230px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top:150px;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: 200%;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: 160px;
+  height: 120px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: white;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="header">
+  <h1>My Interests - Sports </h1>
+</div>
+
+<div class="navbar">
+ <a href="index.html">Home</a>
+  <a href="page3.html">Personal Details</a>
+   <a href="project.html">Curriculum Vitae </a>
+  <a href="travel.html">Travel</a>
+ <a href="consultant.html" class="right">Consultancy Website</a>
+ 
+</div>
+
+
+
+<div class="container">
+ <span class="title">Sports</span>
+  <ul id="imgs">
+    <li><img src="team.jpg" alt="" /></li>
+       <li><img src="goal.jpg" alt="" /></li>
+         <li><img src="team1.jpg" alt="" /></li>
+          <li><img src="sticks.jpg" alt="" /></li>
+           <li><img src="ucc.jpg" alt="" /></li>
+             <li><img src="concert.jpg" alt="" /></li>
+            <li><img src="musicbook.jpg" alt="" /></li>
+	     <li><img src="playing.jpg" alt="" /></li>
+	    <li><img src="violin.jpg" alt="" /></li>
+	 <li><img src="suski.jpg" alt="" /></li>
+	<li><img src="staff.jpg" alt="" /></li>
+  </ul>
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="lib/ImageScroll.js"></script>
+   <script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+      $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+</body>
+</html>
+
+
+<body>
+ <br>
+  <br>
+   <br>
+ <div align="center">
+   <p> <b>Hockey</b>  </p>
+   
+   <p> Since the age of 8 I have played hockey. I started by playing for "Aston hockey club". When I entered secondary school I played for my school. 
+   <p> The commitment to play 3 times a week at senior level increased my skills and stamina for the sport.
+   <P> Being close to my team members is very important to me as you build connectioins on and off the pitch. 
+   <P> Now i am playing for my college and hope to prsue to coaching when I am older. 
+</p>   
+
+ <br>
+  <br>
+   <br>
+
+  <div align="center">
+   <p> <b>Music</b>  </p>
+   
+   <p> I have been heavily involved in music since the age of 4, Playing violin to a high standard in solo preforming the suzuki method for the last 14 years.
+   <p>After completing 5 grades in a very well established music school “ The cork school of music “ and later completing
+   <p> 2 more grades in the equally high standard school “The royal Irish academy of music’. Using these skills to my advantage I studied music in school, Completeing my leaving cert with a H1.
+   <p>This April I hope to complete my final grade 8. Playing violin has given me the opportunity to increase my  personal development and enhance creative capabilities. 
+
+    <br>
+	 <br>
+	
+	</body>
+	
+
+
+ 

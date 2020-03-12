@@ -1,0 +1,178 @@
+
+<!DOCTYPE>
+
+<head>
+<title>Interests</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #B0E0E6;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+</style>
+
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#container {
+  overflow: hidden;
+  width: 800px;
+  height: 230px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top:150px;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: 200%;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: 160px;
+  height: 120px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: white;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="header">
+  <h1>My Travel </h1>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+   <a href="page3.html">Personal Details</a>
+   <a href="project.html">Curriculum Vitae </a>
+   <a href="page2.html">Interests - Sports </a>
+     <a href="consultant.html" class="right">Consultancy Website</a>
+
+</div>
+
+
+
+<div class="container">
+ <span class="title">Travel</span>
+  <ul id="imgs">
+    <li><img src="il.jpg" alt="" /></li>
+    <li><img src="blue.jpg" alt="" /></li>
+    <li><img src= "gy.jpg" alt="" /></li>
+    <li><img src= "wf.jpg" alt=" /></li>
+    <li><img src= "af.jpg" alt="" /></li>
+    <li><img src="fam.jpg" alt="" /></li>
+	<li><img src="kids.jpg" alt="" /></li>
+	<li><img src="school.jpg" alt="" /></li>
+	<li><img src="af.jpg" alt="" /></li>
+	<li><img src="build1.jpg" alt="" /></li>
+  </ul>
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="lib/ImageScroll.js"></script>
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+      $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+</body>
+</html>
+
+
+<body>
+<br>
+<br>
+<br>
+
+  <div align="center">
+   <p> <b>Africa</b>  </p>
+     
+      <p> I travelled to Africa in May 2018 with the schools and health foundation.
+      <p>I got the oppertunity to travel to Sierra Leone after successfully writing a letter and securing a place through an interview.
+	  <p> Sierra Leone was a formative experience in my life, my peers and I raised €10,000 to build a school for underprivileged children
+
+      <p> Although sierra Leone is a third world country it was the best experience of my life,
+      <p>One I will never forget. Bringing kids joy by being able to open a school to provide an education for them 
+      <p>is why sierra Leone was the best place I have travelled to </p>
+     
+     
+      <p> <b>Iceland </b>  </p>
+
+      <p>In October 2018 i travelled to Iceland as part of a school tour.
+      <p> Iceland was an amazing experience as we visited multiple attratctions. These include Blue lagon, geysir, skogafoss, and gullfoss falls.  </p>
+      <p>Iceland was one of my favourite countrys to visits as its filled with amazing unique sights </p>
+
+
+ 
